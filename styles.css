@@ -1,0 +1,272 @@
+body {
+    background-color: #37779b;
+    background-image: url('https://raw.githubusercontent.com/jyotsna-iy/jyotsna-iy.github.io/main/bganne.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background-image: url('https://raw.githubusercontent.com/jyotsna-iy/jyotsna-iy.github.io/main/heading1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.sidenav {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    color: #ffffff;
+}
+
+.sidenav li {
+    margin: 0 5px;
+    position: relative;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.sidenav .has-submenu > a::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.sidenav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.sidenav li:hover > ul {
+    display: block;
+}
+
+.sidenav ul ul li {
+    width: 100%;
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+    box-sizing: border-box; 
+}
+
+.menu-button {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+section p {
+    font-size: 15px;
+    margin: 20px 0;
+    padding: 20px 0;
+    text-align: left;
+    width: 100%;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+    color: #ffffff;
+    background: none;
+}
+
+footer img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.psa-image {
+    width: 100%;
+    height: 100px;
+    background-image: url('https://raw.githubusercontent.com/jyotsna-iy/jyotsna-iy.github.io/main/signature.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: glowPulse 4s infinite ease-in-out;  /* yo yo im testing this */
+    filter: drop-shadow(0 0 0px white);  /* yo yo im testing this */
+}
+
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 0px white);          /* yo yo im testing this */
+    }
+    50% {
+        filter: drop-shadow(0 0 20px white);       
+    }
+    100% {
+        filter: drop-shadow(0 0 0px white);        /* yo yo im testing this */
+    }
+}
+
+.watermark {
+    margin-top: 0.2em;
+    opacity: 0.3;
+    color: #888;
+    font-size: 8px;
+    font-family: 'DM Mono', monospace;
+    line-height: 1;
+}
+
+.watermark a {
+    text-decoration: none;
+    color: #888;
+}
+
+/* Mobile*/
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    .sidenav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidenav li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .sidenav ul ul {
+        position: static;
+        display: none;
+        margin-left: 20px;
+        border: none;
+    }
+
+    .menu-button {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .sidenav.show {
+        display: block;
+    }
+
+    .sidenav .submenu-active > ul {
+        display: block;
+    }
+
+    .content {
+        padding: 15px;
+        width: 100%; 
+    }
+
+    .psa-image {
+        height: 100px;
+    }
+
+    .watermark {
+        font-size: 7px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    section p {
+        font-size: 15px;
+        padding: 20px 0;
+    }
+
+    footer img {
+        margin: 0 2cm;
+    }
+
+    .text-image-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .text-content {
+        flex: 1;
+    }
+
+    .image-content {
+        flex-shrink: 0;
+    }
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('https://raw.githubusercontent.com/jyotsna-iy/jyotsna-iy.github.io/main/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

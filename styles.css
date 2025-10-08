@@ -24,7 +24,7 @@ header {
     background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/heading1.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
 }
 
 .container {

@@ -154,7 +154,7 @@ footer img {
     background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/signature.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     animation: glowPulse 4s infinite ease-in-out;  
     filter: drop-shadow(0 0 0px white); 
 }

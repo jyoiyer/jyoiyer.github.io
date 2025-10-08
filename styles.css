@@ -15,7 +15,7 @@ body {
     box-sizing: border-box;
     letter-spacing: 2px;
     text-align: center;
-    color: #37779b;
+    color: #37779b; /* did i make a mistake*/
 }
 
 header {
@@ -66,7 +66,7 @@ header {
 
 .sidenav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #37779b; /* tryinnnng */
     display: block;
     padding: 5px 10px;
     white-space: nowrap;
@@ -104,7 +104,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    color: #37779b;
+    color: #37779b; /* welp*/
     box-sizing: border-box; 
 }
 
@@ -121,7 +121,7 @@ section {
     align-items: center;
     padding: 20px;
     text-align: left;
-    color: #ffffff;
+    color: #37779b; /* trying this now */
 }
 
 section p {
@@ -130,7 +130,7 @@ section p {
     padding: 20px 0;
     text-align: left;
     width: 100%;
-    color: #ffffff;
+    color: #37779b;  /* trying this now */
 }
 
 footer {

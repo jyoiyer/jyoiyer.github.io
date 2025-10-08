@@ -1,6 +1,6 @@
 body {
-    background-color: #37779b;
-    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/bganne.png');
+    background-color: #ffffff;
+    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -84,8 +84,8 @@ header {
     top: 100%;
     left: 0;
     background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
+    border: 0px solid #ffffff;
+    border-radius: 0px;
     z-index: 1000;
     padding: 5px 0;
 }

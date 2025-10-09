@@ -47,13 +47,14 @@ header {
     top: 0;
     left: 0;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .sidenav ul {
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: 0px;
     margin: 0;
-    display: flex;
+    display: block;
     /*justify-content: space-around;*/
     /*align-items: center;*/
     /*flex-wrap: nowrap;*/
@@ -61,15 +62,16 @@ header {
 }
 
 .sidenav li {
-    margin: 5px 0;
+    margin: 10px 0;
     position: relative;
+    display: block;   
 }
 
 .sidenav a {
     text-decoration: none;
     color: #ffffff; /* tryinnnng */
     display: block;
-    padding: 5px;
+    padding: 10px 15px;
     white-space: nowrap;
 }
 
@@ -77,40 +79,33 @@ header {
     content: '▼';
     font-size: 0.7em;
     margin-left: 5px;
-}
-
-.sidenav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    border: 0px solid #ffffff;
-    border-radius: 0px;
-    z-index: 1000;
-    padding: 5px 0;
+    transition: transform 0.2s ease;
 }
 
 .sidenav li:open > a::after {
     transform: rotate(180deg); 
 }
 
+.sidenav ul ul {
+    display: none;
+    padding: 15px;
+}
+
 .sidenav li.open > .submenu {
     display: block;
 }
 
-sidenav li:hover > ul {
+.sidenav li:hover > ul {
     display: none;
 }
 
 .sidenav ul ul li {
-    margin 4px 0: ;             
+    margin 4px 0:;             
 }
 
 .content {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: 270px;
+    max-width: calc(100% - 384px);
+    margin-left: 384px;
     padding: 20px;
     color: #37779b; /* welp*/
     box-sizing: border-box; 
@@ -191,57 +186,6 @@ footer img {
 .watermark a {
     text-decoration: none;
     color: #888;
-}
-
-/* Mobile*/
-@media screen and (max-width: 768px) {
-    body {
-        background-size: cover;
-    }
-
-    .sidenav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sidenav li {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .sidenav ul ul {
-        position: static;
-        display: none;
-        margin-left: 20px;
-        border: none;
-    }
-
-    .menu-button {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .sidenav.show {
-        display: block;
-    }
-
-    .sidenav .submenu-active > ul {
-        display: block;
-    }
-
-    .content {
-        padding: 15px;
-        width: 100%; 
-    }
-
-    .psa-image {
-        height: 100px;
-    }
-
-    .watermark {
-        font-size: 7px;
-    }
 }
 
 @media screen and (min-width: 769px) {

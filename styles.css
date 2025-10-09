@@ -25,6 +25,9 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
+    z-index: 1;
+    position: relative;
+    
 }
 
 .container {
@@ -40,7 +43,7 @@ header {
 
 .sidenav {
     width: 384px;
-    height: 577.6px;
+    height: 100vh;
     padding: 20px 10px;
     background-color: #37779b;
     position: fixed; 
@@ -48,6 +51,10 @@ header {
     left: 0;
     box-sizing: border-box;
     overflow-y: auto;
+    z-index: 2; 
+    display: flex;             
+    flex-direction: column;   
+    justify-content: space-between; 
 }
 
 .sidenav ul {
@@ -62,7 +69,7 @@ header {
 }
 
 .sidenav li {
-    margin: 10px 0;
+    margin: 6px 0;
     position: relative;
     display: block;   
 }
@@ -71,8 +78,10 @@ header {
     text-decoration: none;
     color: #ffffff; /* tryinnnng */
     display: block;
-    padding: 10px 15px;
+    padding: 6px 15px;
     white-space: nowrap;
+    font-size: 14px; 
+    text-align: left; 
 }
 
 .sidenav .has-submenu > a::after {
@@ -109,6 +118,7 @@ header {
     padding: 20px;
     color: #37779b; /* welp*/
     box-sizing: border-box; 
+    z-index: 1;
 }
 
 .menu-button {
@@ -157,7 +167,7 @@ footer img {
     background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/signature.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     animation: glowPulse 4s infinite ease-in-out;  
     filter: drop-shadow(0 0 0px white); 
 }

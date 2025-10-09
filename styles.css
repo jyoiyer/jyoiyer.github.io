@@ -39,10 +39,10 @@ header {
 }
 
 .sidenav {
-    width: 250px;
-    max-width: 100vh;
+    width: 384px;
+    height: 577.6px;
     padding: 20px 10px;
-    background-color: transparent;
+    background-color: #37779b;
     position: fixed; 
     top: 0;
     left: 0;
@@ -51,25 +51,25 @@ header {
 
 .sidenav ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 10px;
     margin: 0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    color: #ffffff;
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
+    /*flex-wrap: nowrap;*/
+    /*color: #ffffff;*/
 }
 
 .sidenav li {
-    margin: 0 5px;
+    margin: 5px 0;
     position: relative;
 }
 
 .sidenav a {
     text-decoration: none;
-    color: #37779b; /* tryinnnng */
+    color: #ffffff; /* tryinnnng */
     display: block;
-    padding: 5px 10px;
+    padding: 5px;
     white-space: nowrap;
 }
 
@@ -91,13 +91,20 @@ header {
     padding: 5px 0;
 }
 
-.sidenav li:hover > ul {
+.sidenav li:open > a::after {
+    transform: rotate(180deg); 
+}
+
+.sidenav li.open > .submenu {
     display: block;
 }
 
+sidenav li:hover > ul {
+    display: none;
+}
+
 .sidenav ul ul li {
-    width: 100%;
-    margin: 0;
+    margin 4px 0: ;             
 }
 
 .content {

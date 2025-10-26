@@ -5,6 +5,8 @@ body {
     height: 100%;
     display: flex;
     color: #37779b;
+    justify-content: flex-start; 
+    align-items: center;
 }
 
 .container {
@@ -140,7 +142,7 @@ footer img {
     min-height: 100vh;
     box-sizing: border-box;
     background-color: #ffffff;
-    max-width: 1000px;           
+    max-width: calc(100% - 384px);           
 }
 
 .menu-button {

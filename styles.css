@@ -102,7 +102,7 @@ footer img {
 }
 
 .sidenav a::before {
-    content: '-'; /* omgggg testing */
+    content: '├──'; /* omgggg testing */
     font-size: 0.8em;
     margin-right: 5px;
 }

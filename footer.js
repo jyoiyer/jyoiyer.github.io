@@ -3,5 +3,11 @@ fetch("/footer.html")
   .then(html => {
     const el = document.createElement("div");
     el.innerHTML = html;
-    document.body.appendChild(el);
+
+    const sidenav = document.querySelector(".sidenav");
+    if (sidenav) {
+      sidenav.appendChild(el);
+    } else {
+      console.error("No .sidenav element found!");
+    }
   });

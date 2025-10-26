@@ -49,12 +49,14 @@ body {
 }
 
 .footer-images {
-    text-align: center;
-    margin-top: 20px;
-    color: #ffffff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* testing */
+    z-index: 3;
+    position: relative;
     padding: 10px 0;
     background: none;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .signature-image {

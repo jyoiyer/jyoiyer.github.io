@@ -62,7 +62,7 @@ footer img {
     width: 15px;
     margin: 0 10px;
     background-position: left; /* temp fix */
-    horizontal-align: center;
+    vertical-align: middle;
 }
 
 .signature-image {

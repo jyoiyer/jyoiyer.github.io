@@ -15,7 +15,7 @@ body {
     box-sizing: border-box;
     letter-spacing: 2px;
     text-align: center;
-    color: #37779b; /* did i make a mistake*/
+    color: #37779b; 
 }
 
 header {
@@ -24,7 +24,7 @@ header {
     background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/heading1.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left; /* testing */
     z-index: 3;
     position: relative;
     margin-bottom: 0px; 

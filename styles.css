@@ -18,18 +18,6 @@ body {
     color: #37779b; 
 }
 
-header {
-    width: 100%;
-    height: 150px;
-    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/heading1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left; /* testing */
-    z-index: 3;
-    position: relative;
-    margin-bottom: 0px; 
-    
-}
 
 .container {
     flex: 1;
@@ -56,6 +44,20 @@ header {
     display: flex;             
     flex-direction: column;   
     justify-content: flex-start; 
+}
+
+
+.heading-image {
+    width: 100%;
+    height: 150px;
+    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/heading1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* testing */
+    z-index: 3;
+    position: relative;
+    margin-bottom: 0px; /* need to change this to 20px possibly */
+    
 }
 
 .psa-image {

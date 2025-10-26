@@ -48,22 +48,22 @@ body {
     
 }
 
-footer img {
-    width: 15px;
-    margin: 0 10px;
-    background-position: left; /* temp fix */
-    vertical-align: center;
-}
-
 .footer-images {
     display: flex;
     justify-content: center; 
     align-items: center; 
     gap: 10px; 
-    margin-bottom: 0; 
+    margin-top: auto;
+    margin-bottom: 20px; 
 }
 
 
+footer img {
+    width: 15px;
+    margin: 0 10px;
+    background-position: left; /* temp fix */
+    horizontal-align: center;
+}
 
 .signature-image {
     width: 100%;

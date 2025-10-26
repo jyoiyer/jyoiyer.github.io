@@ -95,9 +95,18 @@ footer img {
 
 .sidenav li {
     margin: 6px 0;
-    position: relative;
     display: block;   
+    position: relative;
+    padding-left: 20px; 
+   
 }
+
+.sidenav a::before {
+    content: '-'; /* omgggg testing */
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
 
 .sidenav a {
     text-decoration: none;

@@ -4,10 +4,10 @@ fetch("/footer.html")
     const el = document.createElement("div");
     el.innerHTML = html;
 
-    const sidenav = document.querySelector(".sidenav");
-    if (sidenav) {
-      sidenav.appendChild(el);
+    const footerContainer = document.querySelector(".footer-container"); // Define a specific container for the footer
+    if (footerContainer) {
+      footerContainer.appendChild(el);
     } else {
-      console.error("No .sidenav element found!");
+      console.error("No .footer-container element found!");
     }
   });

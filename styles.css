@@ -133,11 +133,12 @@ footer img {
 }
 
 .content {
-    margin-left: 384px; 
-    padding: 60px 80px;
-    max-width: 1000px;  
+    margin-left: 384px;          
+    padding: 60px 80px;          
+    min-height: 100vh;
     box-sizing: border-box;
-    color: #37779b;
+    background-color: #ffffff;
+    max-width: 1000px;           
 }
 
 .menu-button {

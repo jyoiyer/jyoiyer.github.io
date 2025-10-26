@@ -71,15 +71,6 @@ body {
     margin: auto;
 }
 
-
-footer img {
-    width: 15px;
-    margin: 0 10px;
-    background-position: left; /* temp fix */
-    vertical-align: center;
-}
-
-
 .sidenav ul {
     list-style-type: none;
     padding-left: 0px;

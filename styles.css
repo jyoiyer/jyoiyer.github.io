@@ -1,23 +1,11 @@
 body {
     background-color: #ffffff;
-    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
     font-family: 'Merriweather', serif;
     margin: 0;
-    padding: 150px;
-    box-sizing: border-box;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #37779b; 
+    height: 100%;
+    display: flex;
+    color: #37779b;
 }
-
 
 .container {
     flex: 1;
@@ -145,12 +133,11 @@ footer img {
 }
 
 .content {
-    max-width: calc(100% - 384px);
-    margin-left: 384px;
-    padding: 20px;
-    color: #37779b; /* welp*/
-    box-sizing: border-box; 
-    z-index: 1;
+    margin-left: 384px; 
+    padding: 60px 80px;
+    max-width: 1000px;  
+    box-sizing: border-box;
+    color: #37779b;
 }
 
 .menu-button {

@@ -48,16 +48,22 @@ body {
     
 }
 
-.footer-images {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; /* testing */
-    z-index: 3;
-    position: relative;
-    padding: 10px 0;
-    background: none;
-    margin-bottom: 0px;
+footer img {
+    width: 15px;
+    margin: 0 10px;
+    background-position: left; /* temp fix */
+    vertical-align: center;
 }
+
+.footer-images {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 0; 
+}
+
+
 
 .signature-image {
     width: 100%;
@@ -68,7 +74,8 @@ body {
     background-position: left; /* temp fix */
     animation: glowPulse 4s infinite ease-in-out;  
     filter: drop-shadow(0 0 0px white); 
-    margin: auto;
+    margin-top: 20px; /* Adding space above for the footy */
+    margin-bottom: 0; /* Adding space above for the footy */
 }
 
 .sidenav ul {

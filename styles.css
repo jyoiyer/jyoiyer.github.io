@@ -57,6 +57,7 @@ body {
     align-items: center; 
     gap: 10px; 
     margin-top: auto;
+    position: relative; 
     margin-bottom: 20px; 
 }
 

@@ -66,6 +66,7 @@ footer {
     display: flex;
     justify-content: center; 
     gap: 10px; 
+    cursor: pointer;
 }
 
 
@@ -88,6 +89,7 @@ footer img {
     margin-top: 20px; /* Adding space above for the footy */
     margin-bottom: 0; /* Adding space above for the footy */
     z-index: 1; 
+    cursor: pointer;
 }
 
 .sidenav ul {

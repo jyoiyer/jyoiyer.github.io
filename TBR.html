@@ -8,10 +8,10 @@
 
   <style>
     .bookshelf-grid {
-      max-width: 1000px; 
-      margin: 0 auto; 
+      max-width: 1000px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
       gap: 20px;
       padding: 0;
     }
@@ -36,6 +36,10 @@
     .bookshelf-book img:hover {
       transform: scale(1.05);
     }
+
+    .bookshelf-book .caption {
+      margin-top: 8px;
+    }
   </style>
 </head>
 
@@ -49,16 +53,14 @@
       <section>
         <h2></h2>
         <div class="bookshelf-grid" id="bookshelf"></div>
-
-        <p style="margin-top: 40px;"><b></b><br><br></p>
       </section>
     </div>
   </div>
 
-
   <script src="script.js"></script>
 
   <script>
+    
 const books = [
   { title: "Meet the Savarnas: Indian Millennials Whose Mediocrity Broke Everything", author: "Ravikant Kisana" },
   { title: "Make Me a Man!: Masculinity, Hinduism, and Nationalism in India", author: "Sikata Bannerjee" },
@@ -177,6 +179,7 @@ const books = [
  const shelf = document.getElementById("bookshelf");
     const fallbackImage = "https://raw.githubusercontent.com/jyotsna-iy/jyotsna-iy.github.io/main/document.png";
 
+
     async function fetchCoverID(book) {
       try {
         const response = await fetch(
@@ -192,29 +195,33 @@ const books = [
     }
 
     async function renderBooks() {
-      for (const book of books) {
+
+      const coverPromises = books.map(async (book) => {
         const coverId = await fetchCoverID(book);
+        return { book, coverId };
+      });
+
+      const results = await Promise.all(coverPromises);
+
+      results.forEach(({ book, coverId }) => {
         const bookDiv = document.createElement("div");
         bookDiv.className = "bookshelf-book";
 
         const img = document.createElement("img");
-        if (coverId) {
-          img.src = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
-        } else {
-          img.src = fallbackImage;
-        }
+        img.src = coverId ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg` : fallbackImage;
         img.alt = `Cover of ${book.title}`;
         img.onerror = () => {
           img.src = fallbackImage;
         };
 
         const caption = document.createElement("div");
-        caption.textContent = book.title;
+        caption.className = "caption";
+        caption.textContent = `${book.title} by ${book.author}`;
 
         bookDiv.appendChild(img);
         bookDiv.appendChild(caption);
         shelf.appendChild(bookDiv);
-      }
+      });
     }
 
     renderBooks();

@@ -60,19 +60,6 @@ footer {
     background: none;
 }
 
-.footer-img {
-    width: 30px;
-    height: 100px;
-    background-image: url('https://raw.githubusercontent.com/jyoiyer/jyoiyer.github.io/main/footer.html');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left; /* temp fix */
-    margin-top: 20px; /* Adding space above for the footy */
-    margin-bottom: 0; /* Adding space above for the footy */
-    z-index: 1; 
-    cursor: pointer;
-    vertical-align: middle;
-}
     
 .signature-image {
     width: 100%;

@@ -52,10 +52,12 @@ body {
 }
 
 .footer-images {
+    width: 50%;
     display: inline-block;
     margin: 0 10px;    
     justify-content: center; /* back i guesssss */
     align-items: center; /* back i guess */
+    overflow-y: auto;
     cursor: pointer;
 }
     

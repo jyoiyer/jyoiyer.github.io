@@ -56,14 +56,14 @@ footer {
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
-    color: #ffffff;
+    color: #;
     background: none;
 }
 
 footer img {
     width: 30px;
     margin: 0 10px;
-    vertical-align: middle;
+    vertical-align: left;
 }
     
 .signature-image {

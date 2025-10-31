@@ -54,17 +54,17 @@ body {
 footer {
     display: flex;
     justify-content: center;
-    align-items: left;
-    max-width: 20px;
+    align-items: right;
+    max-width: 5px;
 }
 
 .footer-images {
-    width: 20px;
+    width: 5px;
     max-width: 20px
     margin: 0 10px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: right;
     margin-top: 20px; 
     margin-bottom: 0;  
     z-index: 1; 

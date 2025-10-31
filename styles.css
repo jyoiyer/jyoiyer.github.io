@@ -52,23 +52,26 @@ body {
 }
 
 footer {
-    text-align: center;
-    padding: 20px 0;
     width: 100%;
-    margin-top: auto;
-    color: #;
-    background-color: #;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 20px; 
+    margin-bottom: 0;  
+    z-index: 1; 
+    cursor: pointer;
 }
 
 .footer-images {
-    width: 100px; 
-    margin-bottom: 10px; 
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 20px; 
+    margin-bottom: 0;  
+    z-index: 1; 
+    cursor: pointer;
 }
-
     
 .signature-image {
     width: 100%;

@@ -52,8 +52,7 @@ body {
 }
 
 .footer-images {
-    width: 30%;             
-    height: 10px; 
+    display: inline-block;
     margin: 0 10px;    
     justify-content: center; /* back i guesssss */
     align-items: center; /* back i guess */

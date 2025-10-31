@@ -51,6 +51,12 @@ body {
     
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-images {
     width: 5px;
     height: 5px;

@@ -55,15 +55,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: left;
-    max-width: 5px;
-    max-height: 5px; 
+    max-width: 30px;
 }
 
 .footer-images {
-    width: 5px;
-    height: 5px;
-    max-width: 5px; 
-    max-height: 5px; 
+    width: 30px;
     margin: 0 10px;
     background-size: contain;
     background-repeat: no-repeat;

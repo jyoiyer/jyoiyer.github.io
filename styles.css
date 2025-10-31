@@ -54,7 +54,7 @@ body {
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     max-width: 5px;
     max-height: 5px; 
 }
@@ -67,7 +67,7 @@ footer {
     margin: 0 10px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: relative;
+    background-position: left;
     margin-top: 20px; 
     margin-bottom: 0;  
     z-index: 1; 

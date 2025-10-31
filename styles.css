@@ -53,24 +53,29 @@ body {
 
 footer {
     position: fixed;
+    bottom: 0;   /* testing */
+    left: 0;    /* testing */
+    display:flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 10px
+    /* width: 25%; */
+    /* height: 10px */
 }
 
 .footer-images {
     margin: 0 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
     margin-top: 20px; 
     margin-bottom: 0;  
     z-index: 1; 
-    display: flex; /* goddddd */
     justify-content: center; /* goddddd */
     align-items: center; /* goddddd */
     cursor: pointer;
+}
+
+.footer-images img {
+    width: 20px;             
+    height: 20px;             
+    margin: 0 10px;          
 }
     
 .signature-image {

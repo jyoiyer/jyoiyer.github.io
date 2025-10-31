@@ -56,11 +56,13 @@ footer {
     justify-content: center;
     align-items: right;
     max-width: 5px;
+    max-height: 5px;
 }
 
 .footer-images {
     width: 5px;
-    max-width: 20px
+    max-width: 5px
+    max-height: 5px;    
     margin: 0 10px;
     background-size: contain;
     background-repeat: no-repeat;

@@ -52,14 +52,18 @@ body {
 }
 
 .footer-images {
-    width: 100%;
-    height: 250px;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
     margin-top: 20px; 
     margin-bottom: 0;  
     z-index: 1; 
+    display: flex; /* goddddd */
+    justify-content: center; /* goddddd */
+    align-items: center; /* goddddd */
     cursor: pointer;
 }
     

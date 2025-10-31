@@ -55,10 +55,8 @@ footer {
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 5px;
-    height: 5px
-    max-width: 10px;
-    max-height: 10px;
+    width: 25%;
+    height: 10px
 }
 
 .footer-images {

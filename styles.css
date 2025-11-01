@@ -54,7 +54,7 @@ body {
 .footer-images {
     display: inline-block;
     margin: 0 10px;    
-    justify-content: center; /* back i guesssss */
+    justify-content: flex-start; /* back i guesssss */
     align-items: center; /* back i guess */
     cursor: pointer;
 }

@@ -57,13 +57,13 @@ body {
     display: flex;
     justify-content: center; /* back i guesssss */
     align-items: center; /* back i guess */
-    margin: 0 10px;    
+    margin: 0 5px;    
     cursor: pointer;
 }
 
 .footer-images img {
-    width: 50%;                
-    height: 50%;              
+    width: 20%;                
+    height: 20%;              
     object-fit: contain;       
 }
     

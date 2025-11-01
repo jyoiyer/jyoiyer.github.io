@@ -52,8 +52,8 @@ body {
 }
 
 .footer-images {
-    width: 5px;
-    height: 5px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center; /* back i guesssss */
     align-items: center; /* back i guess */

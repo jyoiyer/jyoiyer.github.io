@@ -6,7 +6,6 @@ body {
     display: flex;
     color: #37779b;
     justify-content: center; 
-    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -22,19 +21,6 @@ body {
 }
 
 .sidenav {
-    /*width: 384px;
-    height: 100vh;
-    padding: 20px 20px 20px 40px;
-    background-color: #37779b;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-    z-index: 2; 
-    display: flex;             
-    flex-direction: column;   
-    justify-content: flex-start; 
-    overflow-y: auto;*/
     width: 25%; 
     min-width: 250px; 
     height: 100vh;
@@ -82,7 +68,6 @@ body {
     width: 10%;                
     height: 10%;
     gap: 0.3rem;
-    /* gap:  0.2px; */
     object-fit: contain;
 }
     
@@ -163,12 +148,6 @@ body {
 }
 
 .content {
-    /*margin-left: 384px;          
-    padding: 60px 80px;          
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    max-width: calc(100% - 384px);*/ 
     margin-left: 25%;  
     padding: 60px 80px;
     min-height: 100vh;

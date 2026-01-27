@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jyo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header aria-label="Jyotsna Iyer">
+    </header>
+    
+     <div id="nav-placeholder" style="margin-bottom: 10px;"></div> 
+    
+    <div class="container" style="margin-top: 0; padding-top: 0;">
+        <div class="content" style="text-align: left; margin-top: 0; padding-top: 0;">
+        
+            <section>
+                <h2>Researchers/Scholars/Professionals/Artists</h2>
+                <p style="text-align: center; font-style: italic; color: #37779b;">
+                Rabbit holes on the internet lead me to the work of some incredible researchers. 
+                I wanted to parse a way to understand how I find them and manage to bump into them in the real world if I do. 
+                The URL column records how I discovered them<br>
+                The IRL column tries to document an in real life (IRL) encounter, this may not necessarily be a personal meeting, rather a chance to listen/talk to them in person<br><br>
+                </p><br><br>
+                 <table border="1" id="researcherTable">
+                    <thead>
+                        <tr>
+                            <th>Researcher/Scholar</th>
+                            <th>Thematic Interest</th>
+                            <th>URL</th>
+                            <th>IRL</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+    const researcherData = [
+        { name: "Katherine Yang" },
+        { name: "Laurel Schwulst" },
+        { name: "Leontien Talboom" },
+        { name: "Corinne Cath" }, 
+        { name: "Nancy Mauro-Flude" },
+        { name: "Sarah Shin" },
+        { name: "Ben Vickers" },
+        { name: "Tripta Chandola" },
+        { name: "Silvio Lorusso" },
+        { name: "Maya Indira Ganesh" },
+        { name: "Wendi Yan" },
+        { name: "Lia Schiffito" },
+        { name: "Raqs Media Collective" },
+        { name: "Ruha Benjamin" },
+        { name: "Aris Komporozos-Athanasiou" },
+        { name: "Hito Steyrl" },
+        { name: "Deborah Raji" },
+        { name: "Mindy Seu" },
+        { name: "Pat Thompson" },
+        { name: "Rumman Chowdhury" },
+        { name: "Valeria Ferrari" },
+        { name: "Geert Lovink" },
+        { name: "Peli Grietzer" },
+        { name: "Caroline Basset" },
+        { name: "Idil Galip" },
+        { name: "Sam Lavigne" },
+        { name: "Adam Crymble" },
+        { name: "Spencer Chang" },
+        { name: "Alicia Guo" },
+        { name: "Saffron Huang" },
+        { name: "Matthew Sun" },
+        { name: "Jessica Dai" },
+        { name: "Eyal Weisman" },
+        { name: "Karen Gregory" },
+        { name: "Noopur Raval" },
+        { name: "Ashok Sukumaran" },
+        { name: "Shaina Anand" },
+        { name: "Ravi Sundaram" },
+        { name: "Shannon Mattern" },
+        { name: "Lucan Sin" },
+        { name: "Chia Amisola" },
+        { name: "Xiaowei Wang" },
+        { name: "Crystal Abidin" },
+        { name: "Sandeep Mertia" },
+        { name: "Melissa Terras" },
+        { name: "Jonathan Gray" },
+        { name: "Jeffrey Schnapp" },
+        { name: "Arjun" },
+        { name: "Avani Tandon Vieira" },
+        { name: "Sofia Karim" },
+        { name: "Dibyaduti Roy" },
+        { name: "Miriam Posner" },
+        { name: "Quinn Dombrowski" },
+        { name: "Roopika Risam" },
+        { name: "Jajwalya Karajgikar" },
+        { name: "Dhanashree Thorat" },
+        { name: "Sadia Khatri" },
+        { name: "Aarman Roy" },
+        { name: "Shaunak Sen" },
+        { name: "Ashish Avikunthak" },
+        { name: "Anand Patwardhan" },
+        { name: "Janice Pariat" }
+    ];
+
+    const tableBody = document.querySelector("#researcherTable tbody");
+
+    function renderTable() {
+        tableBody.innerHTML = "";
+        researcherData.forEach(researcher => {
+            const row = tableBody.insertRow();
+            row.insertCell().textContent = researcher.name;
+            row.insertCell().textContent = researcher.thematicInterest || "";
+            
+            const urlCell = row.insertCell();
+            if (researcher.url) {
+                const link = document.createElement('a');
+                link.href = researcher.url;
+                link.textContent = researcher.linkText || 'Profile'; 
+                urlCell.appendChild(link);
+            }
+            row.insertCell().textContent = researcher.irl || "";
+            row.insertCell().textContent = researcher.remarks || "";
+        });
+    }
+
+    function updateResearcher(name, updates) {
+        const researcher = researcherData.find(r => r.name === name);
+        if (researcher) {
+            Object.assign(researcher, updates);
+            renderTable();
+        }
+    }
+
+   function addResearcher(name, thematicInterest = "", url = "", linkText = "", irl = "", remarks = "") {
+    researcherData.push({ name, thematicInterest, url, linkText, irl, remarks }); 
+    renderTable();
+    }
+
+
+    renderTable();  
+    updateResearcher("Katherine Yang aka kaykayserif", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });       
+    updateResearcher("Laurel Schwulst", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });    
+    updateResearcher("Leontien Talboom", { thematicInterest: "Cultural Presevervation, Digital Humanities", url: "https://x.com/theUL/status/1854501287343071262", linkText: "'Saving' the floppy disk: funding unlocks preservation work at Cambridge University Library", irl: "Flickr Foundation's DataLife boat Workshop", remarks: "" });
+    updateResearcher("Corinne Cath", { thematicInterest: "Cloud Infrastructures", url: "https://shop.meatspacepress.com/products/eaten-by-the-internet", linkText: "Eaten by the Internet", irl: "Futures Podcast (Live) with Corinne Cath and Fieke Jansen at Space4", remarks: "" });
+    updateResearcher("Nancy Mauro-Flude", { thematicInterest: "Design Anthropology, Embodied Cognition", url: "https://sister0.org/", linkText: "https://sister0.org/", irl: "", remarks: "Founder of the Autoluminescence Institute" });
+    updateResearcher("Sarah Shin", { thematicInterest: "", url: "https://www.library.ignota.org/", linkText: "Ignota Books", irl: "", remarks: "Bought The Carrier Bag Theory of Fiction by Ursula K. Le Guin at Camden Garden Centre" });
+    updateResearcher("Ben Vickers", { thematicInterest: "", url: "https://www.library.ignota.org/", linkText: "Ignota Books + Twitter", irl: "", remarks: "" });
+    updateResearcher("Tripta Chandola", { thematicInterest: "", url: "https://networkcultures.org/theblogofdisquiet/2024/05/01/_methodologyliterature-review-political-is-the-personal-the-personal-is-always-only-poetic/", linkText: "The Blog of Disquiet", irl: "", remarks: "" });
+    updateResearcher("Silvio Lorusso", { thematicInterest: "", url: "https://networkcultures.org/entreprecariat/why-i-almost-stopped-contributing-to-student-projects/", linkText: "Entreprecariat", irl: "", remarks: "" });
+    updateResearcher("Maya Indira Ganesh", { thematicInterest: "", url: "", linkText: "Website", irl: "Brief chat at Let’s talk about power in AI: tactics for everyday publics (www.aisocietyforum.net/programme)", remarks: "" });
+    updateResearcher("Wendi Yan", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Lia Schiffito", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" }); 
+    updateResearcher("Raqs Media Collective", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Ruha Benjamin", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Aris Komporozos-Athanasiou", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Hito Steyrl", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Deborah Raji", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Mindy Seu", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Pat Thompson", { thematicInterest: "", url: "https://patthomson.net", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Rumman Chowdhary", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Valeria Ferrari", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Geert Lovink", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Peli Grietzer", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Caroline Basset", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Idil Galip", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Sam Lavigne", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });    
+    updateResearcher("Adam Crymble", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Spencer Chang", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Alicia Guo", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Saffron Huang", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Matthew Sun", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Jessica Dai", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Eyal Weisman", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Karen Gregory", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Noopur Raval", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Ashok Sukumaran", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Shaina Anand", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Ravi Sundaram", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Shannon Mattern", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Lucas Sin", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Chia Amisola", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Sandeep Mertia", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Melissa Terras", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Jonathan Gray", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Jeffrey Schnapp", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Arjun", { thematicInterest: "", url: "https://arjunmakesthings.github.io", linkText: "Website", irl: "https://bengaluru.sciencegallery.com/xperimenter-programme", remarks: "We were part of Science Gallery's Xperimenter Programme in 2022" });
+    updateResearcher("Avani Tandon Veira", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Sofia Karim", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Dibyaduti Roy", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Miriam Posner", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Quinn Dombrowski", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Roopika Risam", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Jajwalya Karajgikar", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Dhanashree Thorat", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Sadia Khatri", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Aarman Roy", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Shaunak Sen", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Ashish Avikunthak", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Anand Patwardhan", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+    updateResearcher("Janice Pariat", { thematicInterest: "", url: "", linkText: "", irl: "", remarks: "" });
+
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

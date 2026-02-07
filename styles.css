@@ -141,7 +141,7 @@ body {
 
 .sidenav ul ul li a::before {
     content: '└── ';
-    display: block;
+    display: inline-block;
     text-align: center;
     margin: 0 auto;
     color: #ffffff;

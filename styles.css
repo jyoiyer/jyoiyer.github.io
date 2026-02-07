@@ -3,10 +3,7 @@ body {
     font-family: 'Lunchtype', sans-serif;
     margin: 0;
     height: 100%;
-    display: flex;
     color: #37779b;
-    justify-content: center; 
-    align-items: center;
 }
 
 .container {

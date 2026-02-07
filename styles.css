@@ -98,7 +98,7 @@ body {
     margin: 6px 0;
     display: block;   
     position: relative;
-    padding-left: 20px; 
+    padding-left: 0; 
    
 }
 
@@ -141,9 +141,15 @@ body {
 
 .sidenav ul ul li a::before {
     content: '└── ';
+    display: block;
+    text-align: center;
+    margin: 0 auto;
     color: #ffffff;
-    display:inline-block;
-    margin-inline-start: 5px;
+}
+
+.sidenav ul ul li a {
+    text-align: center;
+    padding: 4px 0;
 }
 
 .content {

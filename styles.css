@@ -125,7 +125,9 @@ body {
 
 .sidenav ul ul {
     display: none;
-    padding: 15px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .sidenav li.open > ul {
@@ -133,12 +135,15 @@ body {
 }
 
 .sidenav ul ul li {
-    margin: 4px 0;             
+    margin: 4px 0;
+    padding-left: 0;              
 }
 
 .sidenav ul ul li a::before {
     content: '└── ';
     color: #ffffff;
+    display:inline-block;
+    margin-inline-start: 5px;
 }
 
 .content {

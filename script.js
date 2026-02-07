@@ -2,26 +2,20 @@ fetch('nav.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('nav-placeholder').innerHTML = data;
-    addEventListeners(); // Add event listeners after loading content
+    addEventListeners(); 
   });
 
 function addEventListeners() {
-  // Add click event to menu button
+  // Menu button for mobile
   const menuButton = document.querySelector('.menu-button');
   if (menuButton) {
     menuButton.addEventListener('click', toggleMenu);
   }
 
+  // Submenu click for all devices
   const submenus = document.querySelectorAll('.has-submenu > a');
   submenus.forEach(submenu => {
     submenu.addEventListener('click', toggleSubmenu);
-  });
-
-  // Add hover events for desktop
-  const submenuParents = document.querySelectorAll('.has-submenu');
-  submenuParents.forEach(parent => {
-    parent.addEventListener('mouseenter', showSubmenu);
-    parent.addEventListener('mouseleave', hideSubmenu);
   });
 }
 
@@ -31,12 +25,11 @@ function toggleMenu() {
 }
 
 function toggleSubmenu(event) {
-  if (window.innerWidth <= 768) {
-    event.preventDefault();
-    const submenuParent = event.target.parentElement;
-    submenuParent.classList.toggle('submenu-active');
-  }
+  event.preventDefault(); 
+  const submenuParent = event.target.parentElement;
+  submenuParent.classList.toggle('open'); 
 }
+
 
 function showSubmenu(event) {
   if (window.innerWidth > 768) {

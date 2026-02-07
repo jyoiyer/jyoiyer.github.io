@@ -119,13 +119,6 @@ body {
     text-align: center; 
 }
 
-.sidenav .has-submenu > a::after {
-    content: '▼';
-    font-size: 0.7em;
-    margin-left: 5px;
-    transition: transform 0.2s ease;
-}
-
 .sidenav li:open > a::after {
     transform: rotate(180deg); 
 }
@@ -135,16 +128,17 @@ body {
     padding: 15px;
 }
 
-.sidenav li.open > .submenu {
+.sidenav li.open > ul {
     display: block;
 }
 
-.sidenav li:hover > ul {
-    display: none;
+.sidenav ul ul li {
+    margin: 4px 0;             
 }
 
-.sidenav ul ul li {
-    margin 4px 0:;             
+.sidenav ul ul li a::before {
+    content: '└── ';
+    color: #ffffff;
 }
 
 .content {

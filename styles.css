@@ -112,11 +112,14 @@ body {
 .sidenav ul li a {
     text-decoration: none;
     color: #ffffff;
-    display: block;
-    padding: 6px 15px;
+    display: inline-block;
+    padding: 6px 0px;
     white-space: nowrap;
     font-size: 14px; 
-    text-align: center; 
+}
+
+.sidenav ul li {
+    text-align: center;   
 }
 
 .sidenav li:open > a::after {
@@ -141,9 +144,6 @@ body {
 
 .sidenav ul ul li a::before {
     content: '└── ';
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
     color: #ffffff;
 }
 
